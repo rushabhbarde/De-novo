@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const splashScreen = document.querySelector('.splash-screen');
     const splashScreen2 = document.querySelector('.splash-screen2');
     const content = document.querySelector('.content');
-    
-    /*setTimeout(function () {
-        // Hide the splash screens
-        splashScreen.style.display = 'none';
-        splashScreen2.style.display = 'none';
-    }, 10000);*/
+
+    const openPopupButton = document.getElementById('open-popup');
+    const openPopupButton1 = document.getElementById('open-popup1');
+    const closePopupButton = document.getElementById('close-popup');
+    const popup = document.getElementById('popup');
+
 
     splashScreen.style.display = 'flex'; // You can change this to 'none' if you want to hide it initially
     splashScreen2.style.display = 'flex'; // You can change this to 'none' if you want to hide it initially
@@ -28,6 +28,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Set a timeout to show the content after a certain duration (e.g., 10 seconds)
     setTimeout(showContent, 3000);
+
+    function openPopup() {
+        popup.style.display = 'flex';
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        popup.style.display = 'none';
+    }
+
+    // Event listeners
+    openPopupButton.addEventListener('click', openPopup);
+    openPopupButton1.addEventListener('click', openPopup);
+    closePopupButton.addEventListener('click', closePopup);
+
+    // Close the popup if the overlay is clicked
+    popup.addEventListener('click', function (event) {
+        if (event.target === popup) {
+            closePopup();
+        }
+    });
     
     menuButton.addEventListener('click', function () {
         nav.classList.toggle('show');
