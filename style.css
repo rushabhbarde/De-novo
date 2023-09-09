@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: splash-animation 3s ease-in-out forwards;
+}
+.splash-screen2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: splash-animation 1.5s ease-in-out forwards;
+}
+
+.splash-content {
+    text-align: center;
+    font-family: 'Handjet', cursive;
+}
+
+.splash-content h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.splash-content p {
+    color: #888888;
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #252525;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.sticky-header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.sticky-header nav ul li a {
+    text-decoration: none;
+    color: #252525;
+}
+
+.logo {
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px;
+    vertical-align: middle;
+}
+.icons-side{
+    display: none;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.icons a {
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.icon-img {
+    width: 24px;
+    height: 24px;
+    border: none;
+}
+.menu-button{
+    display: none;
+}
+.close-button{
+    display: none;
+}
+
+/* Media query for mobile and tablet views */
+@media screen and (max-width: 1023px) {
+
+    .sticky-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .sticky-header nav {
+        display: none;
+    }
+
+    .logo{
+        margin-left: 20px;
+    }
+    .menu-button {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 35px;
+    }
+
+    .menu-button:focus {
+        outline: none;
+    }
+
+    .desktop-nav.show {
+        display: block;
+        position: fixed;
+        top: 70px; /* Adjust the top position to match your header height */
+        right: 0;
+        width: 100%;
+        height: calc(100% - 70px); /* Subtract the header height from the total height */
+        background-color: #ffffff;
+        z-index: 1001;
+        overflow-y: auto;
+    }
+
+    .desktop-nav.show ul {
+        text-align: center;
+        padding: 0;
+        margin: 50px 0;
+    }
+
+    .desktop-nav.show ul li {
+        display: block;
+        margin: 20px 0;
+    }
+    .icons{
+        display: none;
+    }
+    .icons-side{
+        display: flex;
+        flex-direction: column; /* Display icons vertically */
+        align-items: center; /* Center icons horizontally */
+        margin-top: 20px; /* Add spacing between menu items and icons */
+    }
+
+    .icons-side a {
+        text-decoration: none;
+        margin-left: 0; /* Remove margin between icons */
+    }
+
+    .icons-side img {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 10px; /* Add spacing between icon and text */
+        vertical-align: middle;
+    }
+    .close-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+}
+
+@keyframes splash-animation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* Add padding to the top of the content */
+.content {
+    padding-top: 100px; /* Adjust the value as needed to create space below the header */
+}
+
+/* Style for the inner content */
+.content-inner {
+    padding: 20px; /* Add padding inside the content */
+    max-width: 800px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the content horizontally */
+    font-family: 'Handjet', cursive;
+    text-align: center;
+}
