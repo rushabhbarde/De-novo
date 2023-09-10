@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const closePopupButton = document.getElementById('close-popup');
     const popup = document.getElementById('popup');
 
+    const openSignupPopupButton = document.getElementById('open-signup-popup');
+    const closeSignupPopupButton = document.getElementById('close-signup-popup');
+    const signupPopup = document.getElementById('signup-popup');
+    const loginLink = document.getElementById('open-login-popup');
+
 
     splashScreen.style.display = 'flex'; // You can change this to 'none' if you want to hide it initially
     splashScreen2.style.display = 'flex'; // You can change this to 'none' if you want to hide it initially
@@ -38,10 +43,21 @@ document.addEventListener('DOMContentLoaded', function () {
         popup.style.display = 'none';
     }
 
+    function openSignupPopup() {
+        signupPopup.style.display = 'flex';
+    }
+
+    function closeSignupPopup() {
+        signupPopup.style.display = 'none';
+    }
+
     // Event listeners
     openPopupButton.addEventListener('click', openPopup);
     openPopupButton1.addEventListener('click', openPopup);
     closePopupButton.addEventListener('click', closePopup);
+
+    openSignupPopupButton.addEventListener('click', openSignupPopup);
+    closeSignupPopupButton.addEventListener('click', closeSignupPopup);
 
     // Close the popup if the overlay is clicked
     popup.addEventListener('click', function (event) {
@@ -56,6 +72,14 @@ document.addEventListener('DOMContentLoaded', function () {
     closeButton.addEventListener('click', function () {
         nav.classList.remove('show');
     });
+
+    loginLink.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default link behavior
+        closeSignupPopup(); // Close the signup popup
+        openPopup(); // Open the signup popup
+    });
+
+    // Function to toggle password visibility
 
     // Close the sidebar when clicking outside of it
     document.addEventListener('click', function (event) {

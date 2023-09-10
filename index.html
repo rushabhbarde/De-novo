@@ -17,11 +17,11 @@
         </div>
     </div>
     <div class="splash-screen2">
-        <img src="./static/De novo.jpg" alt="De novo">
+        <img src="./static/De creo.jpg" alt="De creo">
     </div>
     <header class="sticky-header">
         <div class="logo">
-            <img src="./static/De novo.jpg" alt="Logo">
+            <img src="./static/De creo.jpg" alt="Logo">
         </div>
         <button class="menu-button">&#9776;</button>
         <nav class="desktop-nav">
@@ -44,15 +44,54 @@
         <div class="popup-overlay" id="popup">
             <div class="popup-content">
                 <span class="close-popup" id="close-popup">&times;</span>
-                <h2 id="popup-title">Login or Sign Up</h2>
-                <!-- Your login/signup form goes here -->
+                <h2 id="login-popup-title">Login</h2>
                 <form id="login-form">
-                    <!-- Add your input fields for username, password, etc. -->
-                    <input type="text" id="username" placeholder="Username" required>
-                    <input type="password" id="password" placeholder="Password" required>
+                    <div class="input-container">
+                        <input type="text" id="login-username" required>
+                        <label for="login-username">Username</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" id="login-password" required>
+                        <label for="login-password">Password</label>
+                    </div>
                     <button type="submit" class="submit-button">Login</button>
                 </form>
-                <p class="popup-text">Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                <p class="popup-text">Don't have an account? <a href="#" id="open-signup-popup" class="signup-link">Sign Up</a></p>
+            </div>
+        </div>
+
+        <div class="popup-overlay" id="signup-popup">
+            <div class="popup-content">
+                <span class="close-popup" id="close-signup-popup">&times;</span>
+                <!-- Add this within the signup popup content -->
+                <div class="signup-form-container">
+                    <h2 id="signup-popup-title">Sign Up</h2>
+                    <form id="signup-form">
+                        <div class="input-container">
+                            <input type="text" id="signup-username" required>
+                            <label for="signup-username">Username</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="email" id="signup-email" required>
+                            <label for="signup-email">Email</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="tel" id="mobile-number" required>
+                            <label for="mobile-number">Mobile Number</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" id="signup-password" required>
+                            <label for="signup-password">Password</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" id="confirm-password" required>
+                            <label for="confirm-password">Confirm Password</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Sign Up</button>
+                    </form>
+                    
+                <p class="popup-text">Already have an account? <a href="#" id="open-login-popup" class="login-link">Login</a></p>
             </div>
         </div>
     </header>
@@ -61,7 +100,7 @@
             <!-- Your website content goes here -->
             <h1>Opening Shortly!</h1>
             <h2>Get ready for the new beginning..</h2>
-            <h2>- De novo</h2>
+            <h2>- De cero</h2>
         </div>
     </div>
     
