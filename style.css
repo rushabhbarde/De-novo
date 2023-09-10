@@ -28,6 +28,7 @@ body {
     width: 100%;
 }
 
+
 .close-popup {
     position: absolute;
     top: 10px;
@@ -132,8 +133,9 @@ input[type="password"],
 input[type="tel"] {
     width: 100%;
     padding: 10px;
+    margin: 10px 0;
     border: none;
-    border-bottom: 2px solid #333;
+    border-bottom: 1px solid #ccc;
     font-size: 16px;
 }
 
@@ -385,6 +387,16 @@ input[type="tel"]:valid + label {
         cursor: pointer;
         color: #252525;
         display: flex;
+    }
+
+    .popup-overlay {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        max-width: 80%; /* Adjust the width as needed */
+        padding: 20px; /* Adjust the padding as needed */
     }
 
 }
