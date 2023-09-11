@@ -3,23 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuButton = document.querySelector('.menu-button');
     const nav = document.querySelector('.desktop-nav');
     const closeButton = document.querySelector('.close-button');
-    const splashScreen = document.querySelector('.splash-screen');
-    const splashScreen2 = document.querySelector('.splash-screen2');
-    const content = document.querySelector('.content');
-
-    splashScreen.style.display = 'flex'; 
-    splashScreen2.style.display = 'flex'; 
-    content.style.display = 'none'; 
-    header.style.display = 'none';
-
-    function showContent() {
-        splashScreen.style.display = 'none';
-        splashScreen2.style.display = 'none';
-        content.style.display = 'block';
-        header.style.display = 'flex'
-    }
-
-    setTimeout(showContent, 3000);
     
     menuButton.addEventListener('click', function () {
         nav.classList.toggle('show');
