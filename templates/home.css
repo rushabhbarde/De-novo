@@ -238,9 +238,9 @@ body {
     margin-top: 20px;
 }
 
-button {
+.addtocartbtn {
     background-color: #333;
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
